@@ -12,7 +12,7 @@ export PATH="./node_modules/.bin:$PATH"
 
 # 1. Wair for deployment ready
 URL=$(now --public --token "$NOW_TOKEN" --team $TEAM)
-await-url "$URL"
+await-url "$URL/api"
 now ls --token "$NOW_TOKEN" --team $TEAM
 
 # 2. Alias
