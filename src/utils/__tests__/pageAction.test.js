@@ -7,7 +7,7 @@ describe('pageAction', () => {
   beforeEach(() => {
     page = {
       click: jest.fn(),
-      waitForSelector: jest.fn(),
+      waitFor: jest.fn(),
       $eval: jest.fn(),
       goto: jest.fn(),
     };
@@ -16,12 +16,12 @@ describe('pageAction', () => {
   it('should perform click', async () => {
     await pageAction(page, ['#id']);
     expect(page.click).toBeCalledWith('#id');
-    expect(page.waitForSelector).not.toBeCalled();
+    expect(page.waitFor).not.toBeCalled();
   });
 
-  it('should perform click and waitForSelector', async () => {
+  it('should perform click and waitFor', async () => {
     await pageAction(page, ['#id,#id3']);
     expect(page.click).toBeCalledWith('#id');
-    expect(page.waitForSelector).toBeCalledWith('#id3', { timeout: 30000 });
+    expect(page.waitFor).toBeCalledWith('#id3', { timeout: 30000 });
   });
 });

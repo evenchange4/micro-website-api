@@ -16,7 +16,7 @@ declare type ParsedQuery = {
 
 declare type Page = {
   click: string => Promise<void>,
-  waitForSelector: (string, any) => Promise<void>,
+  waitFor: (string | number, any) => Promise<void>,
   goto: (string, any) => Promise<void>,
   $eval: (string, any) => Promise<void>,
 };

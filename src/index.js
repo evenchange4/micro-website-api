@@ -29,11 +29,15 @@ const handler /* : Handler */ = async (req, res) => {
       args: ['--no-sandbox'], // for docker
     });
     const page /* : Page */ = await browser.newPage();
+    // await page.setViewport({
+    //   width: 1400,
+    //   height: 800,
+    // })
 
     // 3. Goto
     await page.goto(url, {
       timeout: TIMEOUT,
-      // waitUntil: 'networkidle',
+      waitUntil: 'networkidle',
     });
 
     // 4. Actions

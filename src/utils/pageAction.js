@@ -11,7 +11,7 @@ const pageAction /* : (Page, string[]) => Promise<void> */ = (page, actions) =>
       await page.click(click);
     }
     if (wait) {
-      await page.waitForSelector(wait, {
+      await page.waitFor(/^\d+$/.test(wait) ? Number(wait) : wait, {
         timeout: TIMEOUT || 30000,
       });
     }
