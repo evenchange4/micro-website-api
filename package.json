@@ -36,6 +36,7 @@
   "devDependencies": {
     "await-url": "^0.3.0",
     "babel-eslint": "^8.0.2",
+    "codecov": "^3.0.0",
     "eslint": "^4.10.0",
     "eslint-config-airbnb": "^15.1.0",
     "eslint-config-prettier": "^2.7.0",
