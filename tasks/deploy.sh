@@ -3,6 +3,7 @@
 set -ex
 
 # ENV Variables, Note: NOW_TOKEN in travisCI
+TIMEOUT=9999999
 # NOW config
 TEAM='website-api'
 PROJECT='micro-website-api'
@@ -11,7 +12,7 @@ ALIAS='micro-website-api.now.sh'
 export PATH="./node_modules/.bin:$PATH"
 
 # 1. Wair for deployment ready
-URL=$(now --public --token "$NOW_TOKEN" --team $TEAM)
+URL=$(now -e TIMEOUT="$TIMEOUT" --public --token "$NOW_TOKEN" --team $TEAM)
 # await-url "$URL/api"
 now ls --token "$NOW_TOKEN" --team $TEAM
 

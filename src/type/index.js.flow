@@ -1,0 +1,28 @@
+declare type ReqQuery = {
+  url: string,
+  selector: string,
+  actions?: string[] | string,
+  cache?: "true" | "false",
+  format?: "raw" | "json",
+};
+
+declare type ParsedQuery = {
+  url: string,
+  selector: string,
+  actions: string[],
+  cache: boolean,
+  format: "raw" | "json",
+};
+
+declare type Page = {
+  click: string => Promise<void>,
+  waitForSelector: (string, any) => Promise<void>,
+  goto: (string, any) => Promise<void>,
+  $eval: (string, any) => Promise<void>,
+};
+
+declare type Request = {
+  query: ReqQuery,
+};
+
+declare type Handler = (Request, any) => any;

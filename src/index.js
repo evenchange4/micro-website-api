@@ -1,65 +1,53 @@
-const { send, createError } = require('micro');
+// @flow
+const { send } = require('micro');
 const { router, get } = require('microrouter');
-const Promise = require('bluebird');
 const puppeteer = require('puppeteer');
 const memoryCache = require('memory-cache');
+const validation = require('micro-joi');
+const himalaya = require('himalaya');
+const pageAction = require('./utils/pageAction');
+const getCacheKey = require('./utils/getCacheKey');
+const schema = require('./utils/schema');
+const getQuery = require('./utils/getQuery');
 
-const handler = async (req, res) => {
+const TIMEOUT = Number(process.env.TIMEOUT);
+
+const handler /* : Handler */ = async (req, res) => {
+  const { url, selector, actions, cache, format } = getQuery(req.query);
   let browser;
 
+  // 1. Resolve cache
+  const cacheKey = getCacheKey({ url, selector, actions, format });
+  const cacheContent = memoryCache.get(cacheKey);
+  if (cache && cacheContent) return send(res, 200, cacheContent);
+
   try {
-    // 1. Parameter check
-    const { url, selector, actions } = req.query;
-    if (!url) throw createError(400, `query parameter 'url' is required.`);
-    if (!selector) {
-      throw createError(400, `query parameter 'selector' is required.`);
-    }
-
-    // Resolve cache
-    const cache = req.query.cache !== 'false';
-    const cacheKey = req.url
-      .replace('&cache=false', '')
-      .replace('&cache=true', ''); // TODO: cacheKey
-    const cacheContent = memoryCache.get(cacheKey);
-    if (cache && cacheContent) {
-      return send(res, 200, cacheContent);
-    }
-
+    // 2. Puppeteer
     browser = await puppeteer.launch({
       // headless: false,
       // slowMo: 20,
       args: ['--no-sandbox'], // for docker
     });
-    const page = await browser.newPage();
+    const page /* : Page */ = await browser.newPage();
 
-    // 2. Goto
+    // 3. Goto
     await page.goto(url, {
-      timeout: 9999999,
+      timeout: TIMEOUT,
       // waitUntil: 'networkidle',
     });
 
-    // 3. Action
+    // 4. Actions
     if (actions) {
-      await Promise.each(
-        typeof actions === 'string' ? Array.of(actions) : actions,
-        async action => {
-          const [click, wait] = action.split(',');
-          if (click) {
-            await page.click(click);
-          }
-          if (wait) {
-            await page.waitForSelector(wait, {
-              timeout: 9999999,
-            });
-          }
-        },
-      );
+      await pageAction(page, actions);
     }
 
-    // 4. Selector
-    const content = await page.$eval(selector, el => el.innerHTML);
+    // 5. Selector
+    let content = await page.$eval(selector, el => el.innerHTML);
+    if (format === 'json') {
+      content = himalaya.parse(content);
+    }
 
-    // Store cache
+    // 6. Store cache
     if (cache) {
       memoryCache.put(cacheKey, content);
     } else {
@@ -68,11 +56,15 @@ const handler = async (req, res) => {
 
     send(res, 200, content);
   } catch (error) {
-    console.log(error); //eslint-disable-line
-    send(res, 400, error);
+    console.log({ error }); //eslint-disable-line
+    send(res, 400, {
+      message: error.message,
+      name: error.message,
+      statusCode: 400,
+    });
   }
 
-  return browser.close();
+  return browser && browser.close();
 };
 
-module.exports = router(get('/api', handler));
+module.exports = router(get('/api', validation(schema)(handler)));
