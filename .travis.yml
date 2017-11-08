@@ -21,7 +21,7 @@ after_success:
   # - ./node_modules/.bin/codecov
   - |
     if [ "$TRAVIS_BRANCH" == 'master' ] && [ "$TRAVIS_PULL_REQUEST" == 'false' ]; then
-      ./tasks/deploy.sh
+      travis_wait 20 ./tasks/deploy.sh
     fi
 
 cache:

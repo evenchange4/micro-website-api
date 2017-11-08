@@ -17,6 +17,7 @@
     }
   },
   "dependencies": {
+    "bluebird": "^3.5.1",
     "micro": "^9.0.1",
     "microrouter": "^3.0.0",
     "puppeteer": "^0.12.0"
