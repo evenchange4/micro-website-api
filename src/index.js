@@ -2,6 +2,7 @@ const { send, createError } = require('micro');
 const { router, get } = require('microrouter');
 const Promise = require('bluebird');
 const puppeteer = require('puppeteer');
+const memoryCache = require('memory-cache');
 
 const handler = async (req, res) => {
   let browser;
@@ -14,6 +15,16 @@ const handler = async (req, res) => {
       throw createError(400, `query parameter 'selector' is required.`);
     }
 
+    // Resolve cache
+    const cache = req.query.cache !== 'false';
+    const cacheKey = req.url
+      .replace('&cache=false', '')
+      .replace('&cache=true', ''); // TODO: cacheKey
+    const cacheContent = memoryCache.get(cacheKey);
+    if (cache && cacheContent) {
+      return send(res, 200, cacheContent);
+    }
+
     browser = await puppeteer.launch({
       // headless: false,
       // slowMo: 20,
@@ -24,6 +35,7 @@ const handler = async (req, res) => {
     // 2. Goto
     await page.goto(url, {
       timeout: 9999999,
+      // waitUntil: 'networkidle',
     });
 
     // 3. Action
@@ -47,13 +59,20 @@ const handler = async (req, res) => {
     // 4. Selector
     const content = await page.$eval(selector, el => el.innerHTML);
 
+    // Store cache
+    if (cache) {
+      memoryCache.put(cacheKey, content);
+    } else {
+      memoryCache.del(cacheKey);
+    }
+
     send(res, 200, content);
   } catch (error) {
     console.log(error); //eslint-disable-line
     send(res, 400, error);
   }
 
-  browser.close();
+  return browser.close();
 };
 
 module.exports = router(get('/api', handler));
