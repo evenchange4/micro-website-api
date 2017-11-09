@@ -1,2 +1,5 @@
+build/
+coverage/
+flow-typed/
 node_modules/
 Dockerfile

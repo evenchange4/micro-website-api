@@ -1,6 +1,8 @@
 ## Change Log
 
-### upcoming (2017/11/08 08:37 +00:00)
+### upcoming (2017/11/10 08:54 +00:00)
+- [#1](https://github.com/evenchange4/micro-website-api/pull/1) Update dependencies to enable Greenkeeper 🌴 (#1) (@greenkeeper[bot])
+- [#2](https://github.com/evenchange4/micro-website-api/pull/2) feat(format): support json (#2) (@evenchange4)
 - [2238a6f](https://github.com/evenchange4/micro-website-api/commit/2238a6fde80fd3f99a8cc62f49fd14138ffa3e65) feat: add cache (@evenchange4)
 - [c28e506](https://github.com/evenchange4/micro-website-api/commit/c28e506eb56808904dbad0b13797c958717a697e) feat: multiple action (@evenchange4)
 - [0b98710](https://github.com/evenchange4/micro-website-api/commit/0b9871088c1ddfbf271d73dd86e59f8b27fc080a) fix deploy (@evenchange4)
