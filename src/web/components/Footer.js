@@ -20,7 +20,7 @@ const Wrapper = styled.footer`
 
   > div {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
   }
 `;
 
