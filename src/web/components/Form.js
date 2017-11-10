@@ -163,7 +163,7 @@ const Form = componentFromStream(props$ => {
           {/* 2. Selector */}
           <TextField
             name="selector"
-            label="Enter result selector"
+            label="Enter a target selector"
             placeholder="body > #id"
             type="text"
             value={values.selector}

@@ -64,7 +64,7 @@ exports[`should render <App> correctly 1`] = `
         <mock-tween-one
           animation={
             Object {
-              "duration": 800,
+              "duration": 1000,
               "opacity": 1,
               "y": 0,
             }
@@ -266,7 +266,7 @@ exports[`should render <App> correctly 1`] = `
                 </TextField>
                 <TextField
                   fullWidth={true}
-                  label="Enter result selector"
+                  label="Enter a target selector"
                   margin="dense"
                   name="selector"
                   onChange={[Function]}
@@ -339,7 +339,7 @@ exports[`should render <App> correctly 1`] = `
                                   className="MuiFormLabel-root-13 MuiInputLabel-root-7 MuiInputLabel-formControl-8 MuiInputLabel-animated-11 MuiInputLabel-labelDense-9"
                                   data-shrink={false}
                                 >
-                                  Enter result selector
+                                  Enter a target selector
                                   <span
                                     className=""
                                   >

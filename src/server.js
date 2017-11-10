@@ -56,11 +56,7 @@ const handler /* : Handler */ = async (req, res) => {
     }
 
     // 6. Store cache
-    if (cache) {
-      memoryCache.put(cacheKey, content);
-    } else {
-      memoryCache.del(cacheKey);
-    }
+    memoryCache.put(cacheKey, content);
 
     send(res, 200, content);
   } catch (error) {

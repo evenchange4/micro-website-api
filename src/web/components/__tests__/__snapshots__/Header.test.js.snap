@@ -5,7 +5,7 @@ exports[`should render <Header> correctly 1`] = `
   <mock-tween-one
     animation={
       Object {
-        "duration": 800,
+        "duration": 1000,
         "opacity": 1,
         "y": 0,
       }

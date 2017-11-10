@@ -2,6 +2,7 @@
 
 exports[`should render <PreviewCard> correctly with data 1`] = `
 .c0 {
+  word-wrap: break-word;
   color: rgba(0,0,0,0.54);
 }
 
@@ -219,6 +220,7 @@ exports[`should render <PreviewCard> correctly with data 1`] = `
 
 exports[`should render <PreviewCard> correctly without data 1`] = `
 .c0 {
+  word-wrap: break-word;
   color: rgba(0,0,0,0.54);
 }
 

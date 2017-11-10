@@ -14,7 +14,7 @@ const Header = () => (
   <TweenOne
     animation={{
       opacity: 1,
-      duration: 800,
+      duration: 1000,
       y: 0,
     }}
     style={{
