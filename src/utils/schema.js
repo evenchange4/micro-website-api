@@ -8,7 +8,7 @@ const schema = Joi.object({
       .required(),
     selector: Joi.string().required(),
 
-    actions: Joi.string(),
+    actions: [Joi.string(), Joi.array().items(Joi.string())],
     cache: Joi.boolean().insensitive(),
     format: Joi.any().valid(['raw', 'json']),
   }),

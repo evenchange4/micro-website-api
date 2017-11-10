@@ -23,7 +23,7 @@ now alias set "$URL" "$ALIAS" --token "$NOW_TOKEN" --team $TEAM
 now remove --yes --safe --token "$NOW_TOKEN" --team $TEAM $PROJECT
 
 # 4. Scale to 1
-now scale "$ALIAS" 1 --token "$NOW_TOKEN" --team $TEAM
+now scale "$ALIAS" 1 auto --token "$NOW_TOKEN" --team $TEAM
 
 # 5. Log results
 now ls --token "$NOW_TOKEN" --team $TEAM
