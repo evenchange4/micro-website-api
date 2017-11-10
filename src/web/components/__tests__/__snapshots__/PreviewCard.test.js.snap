@@ -1,0 +1,482 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render <PreviewCard> correctly with data 1`] = `
+.c0 {
+  color: rgba(0,0,0,0.54);
+}
+
+.c1 {
+  max-height: 300px;
+  overflow: auto;
+}
+
+<PreviewCard
+  data="data"
+  url="url"
+>
+  <Card
+    raised={false}
+  >
+    <withStyles(Paper)
+      elevation={2}
+    >
+      <Paper
+        classes={
+          Object {
+            "root": "MuiPaper-root-1",
+            "rounded": "MuiPaper-rounded-2",
+            "shadow0": "MuiPaper-shadow0-3",
+            "shadow1": "MuiPaper-shadow1-4",
+            "shadow10": "MuiPaper-shadow10-13",
+            "shadow11": "MuiPaper-shadow11-14",
+            "shadow12": "MuiPaper-shadow12-15",
+            "shadow13": "MuiPaper-shadow13-16",
+            "shadow14": "MuiPaper-shadow14-17",
+            "shadow15": "MuiPaper-shadow15-18",
+            "shadow16": "MuiPaper-shadow16-19",
+            "shadow17": "MuiPaper-shadow17-20",
+            "shadow18": "MuiPaper-shadow18-21",
+            "shadow19": "MuiPaper-shadow19-22",
+            "shadow2": "MuiPaper-shadow2-5",
+            "shadow20": "MuiPaper-shadow20-23",
+            "shadow21": "MuiPaper-shadow21-24",
+            "shadow22": "MuiPaper-shadow22-25",
+            "shadow23": "MuiPaper-shadow23-26",
+            "shadow24": "MuiPaper-shadow24-27",
+            "shadow3": "MuiPaper-shadow3-6",
+            "shadow4": "MuiPaper-shadow4-7",
+            "shadow5": "MuiPaper-shadow5-8",
+            "shadow6": "MuiPaper-shadow6-9",
+            "shadow7": "MuiPaper-shadow7-10",
+            "shadow8": "MuiPaper-shadow8-11",
+            "shadow9": "MuiPaper-shadow9-12",
+          }
+        }
+        component="div"
+        elevation={2}
+        square={false}
+      >
+        <div
+          className="MuiPaper-root-1 MuiPaper-shadow2-5 MuiPaper-rounded-2"
+        >
+          <withStyles(CardContent)>
+            <CardContent
+              classes={
+                Object {
+                  ".MuiCardContent-root-28:last-child": "MuiCardContent-root-28:last-child",
+                  "root": "MuiCardContent-root-28",
+                }
+              }
+            >
+              <div
+                className="MuiCardContent-root-28"
+              >
+                <withStyles(Typography)
+                  align="center"
+                  paragraph={true}
+                  type="caption"
+                >
+                  <Typography
+                    align="center"
+                    classes={
+                      Object {
+                        "alignCenter": "MuiTypography-alignCenter-42",
+                        "alignJustify": "MuiTypography-alignJustify-44",
+                        "alignLeft": "MuiTypography-alignLeft-41",
+                        "alignRight": "MuiTypography-alignRight-43",
+                        "body1": "MuiTypography-body1-38",
+                        "body2": "MuiTypography-body2-37",
+                        "button": "MuiTypography-button-40",
+                        "caption": "MuiTypography-caption-39",
+                        "colorAccent": "MuiTypography-colorAccent-51",
+                        "colorError": "MuiTypography-colorError-52",
+                        "colorInherit": "MuiTypography-colorInherit-48",
+                        "colorPrimary": "MuiTypography-colorPrimary-49",
+                        "colorSecondary": "MuiTypography-colorSecondary-50",
+                        "display1": "MuiTypography-display1-33",
+                        "display2": "MuiTypography-display2-32",
+                        "display3": "MuiTypography-display3-31",
+                        "display4": "MuiTypography-display4-30",
+                        "gutterBottom": "MuiTypography-gutterBottom-46",
+                        "headline": "MuiTypography-headline-34",
+                        "noWrap": "MuiTypography-noWrap-45",
+                        "paragraph": "MuiTypography-paragraph-47",
+                        "root": "MuiTypography-root-29",
+                        "subheading": "MuiTypography-subheading-36",
+                        "title": "MuiTypography-title-35",
+                      }
+                    }
+                    color="default"
+                    gutterBottom={false}
+                    headlineMapping={
+                      Object {
+                        "body1": "p",
+                        "body2": "aside",
+                        "display1": "h1",
+                        "display2": "h1",
+                        "display3": "h1",
+                        "display4": "h1",
+                        "headline": "h1",
+                        "subheading": "h3",
+                        "title": "h2",
+                      }
+                    }
+                    noWrap={false}
+                    paragraph={true}
+                    type="caption"
+                  >
+                    <p
+                      className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-paragraph-47 MuiTypography-alignCenter-42"
+                    >
+                      <styled.a
+                        href="url"
+                        rel="nofollow"
+                        target="_blank"
+                      >
+                        <a
+                          className="c0"
+                          href="url"
+                          rel="nofollow"
+                          target="_blank"
+                        >
+                          url
+                        </a>
+                      </styled.a>
+                    </p>
+                  </Typography>
+                </withStyles(Typography)>
+                <Styled(withStyles(Typography))>
+                  <withStyles(Typography)
+                    className="c1"
+                  >
+                    <Typography
+                      align="inherit"
+                      className="c1"
+                      classes={
+                        Object {
+                          "alignCenter": "MuiTypography-alignCenter-42",
+                          "alignJustify": "MuiTypography-alignJustify-44",
+                          "alignLeft": "MuiTypography-alignLeft-41",
+                          "alignRight": "MuiTypography-alignRight-43",
+                          "body1": "MuiTypography-body1-38",
+                          "body2": "MuiTypography-body2-37",
+                          "button": "MuiTypography-button-40",
+                          "caption": "MuiTypography-caption-39",
+                          "colorAccent": "MuiTypography-colorAccent-51",
+                          "colorError": "MuiTypography-colorError-52",
+                          "colorInherit": "MuiTypography-colorInherit-48",
+                          "colorPrimary": "MuiTypography-colorPrimary-49",
+                          "colorSecondary": "MuiTypography-colorSecondary-50",
+                          "display1": "MuiTypography-display1-33",
+                          "display2": "MuiTypography-display2-32",
+                          "display3": "MuiTypography-display3-31",
+                          "display4": "MuiTypography-display4-30",
+                          "gutterBottom": "MuiTypography-gutterBottom-46",
+                          "headline": "MuiTypography-headline-34",
+                          "noWrap": "MuiTypography-noWrap-45",
+                          "paragraph": "MuiTypography-paragraph-47",
+                          "root": "MuiTypography-root-29",
+                          "subheading": "MuiTypography-subheading-36",
+                          "title": "MuiTypography-title-35",
+                        }
+                      }
+                      color="default"
+                      gutterBottom={false}
+                      headlineMapping={
+                        Object {
+                          "body1": "p",
+                          "body2": "aside",
+                          "display1": "h1",
+                          "display2": "h1",
+                          "display3": "h1",
+                          "display4": "h1",
+                          "headline": "h1",
+                          "subheading": "h3",
+                          "title": "h2",
+                        }
+                      }
+                      noWrap={false}
+                      paragraph={false}
+                      type="body1"
+                    >
+                      <p
+                        className="MuiTypography-root-29 MuiTypography-body1-38 c1"
+                      >
+                        data
+                      </p>
+                    </Typography>
+                  </withStyles(Typography)>
+                </Styled(withStyles(Typography))>
+              </div>
+            </CardContent>
+          </withStyles(CardContent)>
+        </div>
+      </Paper>
+    </withStyles(Paper)>
+  </Card>
+</PreviewCard>
+`;
+
+exports[`should render <PreviewCard> correctly without data 1`] = `
+.c0 {
+  color: rgba(0,0,0,0.54);
+}
+
+<PreviewCard
+  url="url"
+>
+  <Card
+    raised={false}
+  >
+    <withStyles(Paper)
+      elevation={2}
+    >
+      <Paper
+        classes={
+          Object {
+            "root": "MuiPaper-root-1",
+            "rounded": "MuiPaper-rounded-2",
+            "shadow0": "MuiPaper-shadow0-3",
+            "shadow1": "MuiPaper-shadow1-4",
+            "shadow10": "MuiPaper-shadow10-13",
+            "shadow11": "MuiPaper-shadow11-14",
+            "shadow12": "MuiPaper-shadow12-15",
+            "shadow13": "MuiPaper-shadow13-16",
+            "shadow14": "MuiPaper-shadow14-17",
+            "shadow15": "MuiPaper-shadow15-18",
+            "shadow16": "MuiPaper-shadow16-19",
+            "shadow17": "MuiPaper-shadow17-20",
+            "shadow18": "MuiPaper-shadow18-21",
+            "shadow19": "MuiPaper-shadow19-22",
+            "shadow2": "MuiPaper-shadow2-5",
+            "shadow20": "MuiPaper-shadow20-23",
+            "shadow21": "MuiPaper-shadow21-24",
+            "shadow22": "MuiPaper-shadow22-25",
+            "shadow23": "MuiPaper-shadow23-26",
+            "shadow24": "MuiPaper-shadow24-27",
+            "shadow3": "MuiPaper-shadow3-6",
+            "shadow4": "MuiPaper-shadow4-7",
+            "shadow5": "MuiPaper-shadow5-8",
+            "shadow6": "MuiPaper-shadow6-9",
+            "shadow7": "MuiPaper-shadow7-10",
+            "shadow8": "MuiPaper-shadow8-11",
+            "shadow9": "MuiPaper-shadow9-12",
+          }
+        }
+        component="div"
+        elevation={2}
+        square={false}
+      >
+        <div
+          className="MuiPaper-root-1 MuiPaper-shadow2-5 MuiPaper-rounded-2"
+        >
+          <withStyles(CardContent)>
+            <CardContent
+              classes={
+                Object {
+                  ".MuiCardContent-root-28:last-child": "MuiCardContent-root-28:last-child",
+                  "root": "MuiCardContent-root-28",
+                }
+              }
+            >
+              <div
+                className="MuiCardContent-root-28"
+              >
+                <withStyles(Typography)
+                  align="center"
+                  paragraph={true}
+                  type="caption"
+                >
+                  <Typography
+                    align="center"
+                    classes={
+                      Object {
+                        "alignCenter": "MuiTypography-alignCenter-42",
+                        "alignJustify": "MuiTypography-alignJustify-44",
+                        "alignLeft": "MuiTypography-alignLeft-41",
+                        "alignRight": "MuiTypography-alignRight-43",
+                        "body1": "MuiTypography-body1-38",
+                        "body2": "MuiTypography-body2-37",
+                        "button": "MuiTypography-button-40",
+                        "caption": "MuiTypography-caption-39",
+                        "colorAccent": "MuiTypography-colorAccent-51",
+                        "colorError": "MuiTypography-colorError-52",
+                        "colorInherit": "MuiTypography-colorInherit-48",
+                        "colorPrimary": "MuiTypography-colorPrimary-49",
+                        "colorSecondary": "MuiTypography-colorSecondary-50",
+                        "display1": "MuiTypography-display1-33",
+                        "display2": "MuiTypography-display2-32",
+                        "display3": "MuiTypography-display3-31",
+                        "display4": "MuiTypography-display4-30",
+                        "gutterBottom": "MuiTypography-gutterBottom-46",
+                        "headline": "MuiTypography-headline-34",
+                        "noWrap": "MuiTypography-noWrap-45",
+                        "paragraph": "MuiTypography-paragraph-47",
+                        "root": "MuiTypography-root-29",
+                        "subheading": "MuiTypography-subheading-36",
+                        "title": "MuiTypography-title-35",
+                      }
+                    }
+                    color="default"
+                    gutterBottom={false}
+                    headlineMapping={
+                      Object {
+                        "body1": "p",
+                        "body2": "aside",
+                        "display1": "h1",
+                        "display2": "h1",
+                        "display3": "h1",
+                        "display4": "h1",
+                        "headline": "h1",
+                        "subheading": "h3",
+                        "title": "h2",
+                      }
+                    }
+                    noWrap={false}
+                    paragraph={true}
+                    type="caption"
+                  >
+                    <p
+                      className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-paragraph-47 MuiTypography-alignCenter-42"
+                    >
+                      <styled.a
+                        href="url"
+                        rel="nofollow"
+                        target="_blank"
+                      >
+                        <a
+                          className="c0"
+                          href="url"
+                          rel="nofollow"
+                          target="_blank"
+                        >
+                          url
+                        </a>
+                      </styled.a>
+                    </p>
+                  </Typography>
+                </withStyles(Typography)>
+                <withStyles(Typography)
+                  align="center"
+                  component="div"
+                >
+                  <Typography
+                    align="center"
+                    classes={
+                      Object {
+                        "alignCenter": "MuiTypography-alignCenter-42",
+                        "alignJustify": "MuiTypography-alignJustify-44",
+                        "alignLeft": "MuiTypography-alignLeft-41",
+                        "alignRight": "MuiTypography-alignRight-43",
+                        "body1": "MuiTypography-body1-38",
+                        "body2": "MuiTypography-body2-37",
+                        "button": "MuiTypography-button-40",
+                        "caption": "MuiTypography-caption-39",
+                        "colorAccent": "MuiTypography-colorAccent-51",
+                        "colorError": "MuiTypography-colorError-52",
+                        "colorInherit": "MuiTypography-colorInherit-48",
+                        "colorPrimary": "MuiTypography-colorPrimary-49",
+                        "colorSecondary": "MuiTypography-colorSecondary-50",
+                        "display1": "MuiTypography-display1-33",
+                        "display2": "MuiTypography-display2-32",
+                        "display3": "MuiTypography-display3-31",
+                        "display4": "MuiTypography-display4-30",
+                        "gutterBottom": "MuiTypography-gutterBottom-46",
+                        "headline": "MuiTypography-headline-34",
+                        "noWrap": "MuiTypography-noWrap-45",
+                        "paragraph": "MuiTypography-paragraph-47",
+                        "root": "MuiTypography-root-29",
+                        "subheading": "MuiTypography-subheading-36",
+                        "title": "MuiTypography-title-35",
+                      }
+                    }
+                    color="default"
+                    component="div"
+                    gutterBottom={false}
+                    headlineMapping={
+                      Object {
+                        "body1": "p",
+                        "body2": "aside",
+                        "display1": "h1",
+                        "display2": "h1",
+                        "display3": "h1",
+                        "display4": "h1",
+                        "headline": "h1",
+                        "subheading": "h3",
+                        "title": "h2",
+                      }
+                    }
+                    noWrap={false}
+                    paragraph={false}
+                    type="body1"
+                  >
+                    <div
+                      className="MuiTypography-root-29 MuiTypography-body1-38 MuiTypography-alignCenter-42"
+                    >
+                      <withStyles(CircularProgress)
+                        size={24}
+                      >
+                        <CircularProgress
+                          classes={
+                            Object {
+                              "0%": "%",
+                              "100%": "00%",
+                              "50%": "0%",
+                              "accentColor": "MuiCircularProgress-accentColor-55",
+                              "circle": "MuiCircularProgress-circle-58",
+                              "circleIndeterminate": "MuiCircularProgress-circleIndeterminate-59",
+                              "primaryColor": "MuiCircularProgress-primaryColor-54",
+                              "root": "MuiCircularProgress-root-53",
+                              "svgDeterminate": "MuiCircularProgress-svgDeterminate-57",
+                              "svgIndeterminate": "MuiCircularProgress-svgIndeterminate-56",
+                            }
+                          }
+                          color="primary"
+                          max={100}
+                          min={0}
+                          mode="indeterminate"
+                          size={24}
+                          thickness={3.6}
+                          value={0}
+                        >
+                          <div
+                            className="MuiCircularProgress-root-53 MuiCircularProgress-primaryColor-54"
+                            role="progressbar"
+                            style={
+                              Object {
+                                "height": 24,
+                                "width": 24,
+                              }
+                            }
+                          >
+                            <svg
+                              className="MuiCircularProgress-svgIndeterminate-56"
+                              viewBox="0 0 50 50"
+                            >
+                              <circle
+                                className="MuiCircularProgress-circle-58 MuiCircularProgress-circleIndeterminate-59"
+                                cx={25}
+                                cy={25}
+                                fill="none"
+                                r={20}
+                                strokeWidth={3.6}
+                                style={Object {}}
+                              />
+                            </svg>
+                          </div>
+                        </CircularProgress>
+                      </withStyles(CircularProgress)>
+                    </div>
+                  </Typography>
+                </withStyles(Typography)>
+              </div>
+            </CardContent>
+          </withStyles(CardContent)>
+        </div>
+      </Paper>
+    </withStyles(Paper)>
+  </Card>
+</PreviewCard>
+`;
+
+exports[`should render <PreviewCard> correctly without url 1`] = `<PreviewCard />`;

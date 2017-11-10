@@ -6,5 +6,4 @@ $ docker run --rm -it \
   micro-website-api
 ```
 
-
 [![Greenkeeper badge](https://badges.greenkeeper.io/evenchange4/micro-website-api.svg)](https://greenkeeper.io/)

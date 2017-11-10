@@ -7,3 +7,6 @@
 # flow
 /flow-typed
 /flow-coverage
+
+# CRA
+/build

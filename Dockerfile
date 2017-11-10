@@ -1,4 +1,12 @@
-FROM node:9
+FROM node:9.1.0-slim
+WORKDIR /app
+COPY package.json .
+COPY yarn.lock .
+RUN yarn install --pure-lockfile
+COPY . .
+RUN yarn build
+RUN yarn install --pure-lockfile --production
+# TODO: optimize size
 # https://hub.docker.com/r/zenato/puppeteer/~/dockerfile/
 RUN apt-get update && \
   apt-get install -yq \
@@ -41,11 +49,6 @@ RUN apt-get update && \
   xdg-utils \
   wget && \
   rm -r /var/lib/apt/lists/*
-WORKDIR /app
-COPY package.json .
-COPY yarn.lock .
-RUN yarn install --pure-lockfile --production
-COPY . .
 RUN ls -lA
 EXPOSE 3000
 CMD npm start

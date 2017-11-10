@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render <Header> correctly 1`] = `
+<Header>
+  <mock-tween-one
+    animation={
+      Object {
+        "duration": 800,
+        "opacity": 1,
+        "y": 0,
+      }
+    }
+    component={[Function]}
+    style={
+      Object {
+        "opacity": 0,
+        "transform": "translateY(-40px)",
+      }
+    }
+  >
+    Website API
+  </mock-tween-one>
+</Header>
+`;
