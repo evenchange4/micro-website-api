@@ -10,7 +10,12 @@ const Link = styled.a`
   color: rgba(0, 0, 0, 0.54);
 `;
 
-const StyledTypography = styled(Typography)`
+const LinkWrapper = styled(Typography)`
+  max-height: 2.5em;
+  overflow: hidden;
+`;
+
+const PreviewWrapper = styled(Typography)`
   max-height: 300px;
   overflow: auto;
 `;
@@ -19,13 +24,13 @@ const PreviewCard = ({ url, data }) =>
   url ? (
     <Card>
       <CardContent>
-        <Typography type="caption" paragraph align="center">
+        <LinkWrapper type="caption" paragraph align="center">
           <Link href={url} target="_blank" rel="nofollow">
             {url}
           </Link>
-        </Typography>
+        </LinkWrapper>
         {data ? (
-          <StyledTypography>{data}</StyledTypography>
+          <PreviewWrapper>{data}</PreviewWrapper>
         ) : (
           <Typography component="div" align="center">
             <CircularProgress size={24} />
