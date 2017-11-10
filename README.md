@@ -64,6 +64,10 @@ $ docker run --rm -it \
    [\[WebUI\]](https://micro-website-api.now.sh/?cache=true&format=json&selector=%23root%20%3E%20div&url=https%3A%2F%2Fmichaelhsu.tw%2F)
    [\[API\]](https://micro-website-api.now.sh/api?cache=true&format=json&selector=%23root%20%3E%20div&url=https%3A%2F%2Fmichaelhsu.tw%2F)
 
+6. Multiple actions.
+   [\[WebUI\]](<https://micro-website-api.now.sh/?actions=%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(2)%20a,%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(2).active&actions=%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(1)%20a,%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(1).active&cache=false&format=raw&selector=table&url=https%3A%2F%2Fibank.bok.com.tw%2FPIB%2Fca%2Fca02101%2FCA02101_HOME.xhtml>)
+   [\[API\]](<https://micro-website-api.now.sh/api?actions=%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(2)%20a,%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(2).active&actions=%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(1)%20a,%23formLink%20%3E%20div%3Anth-child(3)%20%3E%20div.wsize_onepage%20%3E%20ul.exchange_intab%20%3E%20li%3Anth-child(1).active&cache=false&format=raw&selector=table&url=https%3A%2F%2Fibank.bok.com.tw%2FPIB%2Fca%2Fca02101%2FCA02101_HOME.xhtml>)
+
 ## Developer Guide
 
 ### Requirements

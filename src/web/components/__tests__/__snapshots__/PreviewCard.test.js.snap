@@ -1,12 +1,17 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`should render <PreviewCard> correctly with data 1`] = `
-.c0 {
+.c1 {
   word-wrap: break-word;
   color: rgba(0,0,0,0.54);
 }
 
-.c1 {
+.c0 {
+  max-height: 2.5em;
+  overflow: hidden;
+}
+
+.c2 {
   max-height: 300px;
   overflow: auto;
 }
@@ -72,87 +77,95 @@ exports[`should render <PreviewCard> correctly with data 1`] = `
               <div
                 className="MuiCardContent-root-28"
               >
-                <withStyles(Typography)
+                <Styled(withStyles(Typography))
                   align="center"
                   paragraph={true}
                   type="caption"
                 >
-                  <Typography
+                  <withStyles(Typography)
                     align="center"
-                    classes={
-                      Object {
-                        "alignCenter": "MuiTypography-alignCenter-42",
-                        "alignJustify": "MuiTypography-alignJustify-44",
-                        "alignLeft": "MuiTypography-alignLeft-41",
-                        "alignRight": "MuiTypography-alignRight-43",
-                        "body1": "MuiTypography-body1-38",
-                        "body2": "MuiTypography-body2-37",
-                        "button": "MuiTypography-button-40",
-                        "caption": "MuiTypography-caption-39",
-                        "colorAccent": "MuiTypography-colorAccent-51",
-                        "colorError": "MuiTypography-colorError-52",
-                        "colorInherit": "MuiTypography-colorInherit-48",
-                        "colorPrimary": "MuiTypography-colorPrimary-49",
-                        "colorSecondary": "MuiTypography-colorSecondary-50",
-                        "display1": "MuiTypography-display1-33",
-                        "display2": "MuiTypography-display2-32",
-                        "display3": "MuiTypography-display3-31",
-                        "display4": "MuiTypography-display4-30",
-                        "gutterBottom": "MuiTypography-gutterBottom-46",
-                        "headline": "MuiTypography-headline-34",
-                        "noWrap": "MuiTypography-noWrap-45",
-                        "paragraph": "MuiTypography-paragraph-47",
-                        "root": "MuiTypography-root-29",
-                        "subheading": "MuiTypography-subheading-36",
-                        "title": "MuiTypography-title-35",
-                      }
-                    }
-                    color="default"
-                    gutterBottom={false}
-                    headlineMapping={
-                      Object {
-                        "body1": "p",
-                        "body2": "aside",
-                        "display1": "h1",
-                        "display2": "h1",
-                        "display3": "h1",
-                        "display4": "h1",
-                        "headline": "h1",
-                        "subheading": "h3",
-                        "title": "h2",
-                      }
-                    }
-                    noWrap={false}
+                    className="c0"
                     paragraph={true}
                     type="caption"
                   >
-                    <p
-                      className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-paragraph-47 MuiTypography-alignCenter-42"
+                    <Typography
+                      align="center"
+                      className="c0"
+                      classes={
+                        Object {
+                          "alignCenter": "MuiTypography-alignCenter-42",
+                          "alignJustify": "MuiTypography-alignJustify-44",
+                          "alignLeft": "MuiTypography-alignLeft-41",
+                          "alignRight": "MuiTypography-alignRight-43",
+                          "body1": "MuiTypography-body1-38",
+                          "body2": "MuiTypography-body2-37",
+                          "button": "MuiTypography-button-40",
+                          "caption": "MuiTypography-caption-39",
+                          "colorAccent": "MuiTypography-colorAccent-51",
+                          "colorError": "MuiTypography-colorError-52",
+                          "colorInherit": "MuiTypography-colorInherit-48",
+                          "colorPrimary": "MuiTypography-colorPrimary-49",
+                          "colorSecondary": "MuiTypography-colorSecondary-50",
+                          "display1": "MuiTypography-display1-33",
+                          "display2": "MuiTypography-display2-32",
+                          "display3": "MuiTypography-display3-31",
+                          "display4": "MuiTypography-display4-30",
+                          "gutterBottom": "MuiTypography-gutterBottom-46",
+                          "headline": "MuiTypography-headline-34",
+                          "noWrap": "MuiTypography-noWrap-45",
+                          "paragraph": "MuiTypography-paragraph-47",
+                          "root": "MuiTypography-root-29",
+                          "subheading": "MuiTypography-subheading-36",
+                          "title": "MuiTypography-title-35",
+                        }
+                      }
+                      color="default"
+                      gutterBottom={false}
+                      headlineMapping={
+                        Object {
+                          "body1": "p",
+                          "body2": "aside",
+                          "display1": "h1",
+                          "display2": "h1",
+                          "display3": "h1",
+                          "display4": "h1",
+                          "headline": "h1",
+                          "subheading": "h3",
+                          "title": "h2",
+                        }
+                      }
+                      noWrap={false}
+                      paragraph={true}
+                      type="caption"
                     >
-                      <styled.a
-                        href="url"
-                        rel="nofollow"
-                        target="_blank"
+                      <p
+                        className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-paragraph-47 MuiTypography-alignCenter-42 c0"
                       >
-                        <a
-                          className="c0"
+                        <styled.a
                           href="url"
                           rel="nofollow"
                           target="_blank"
                         >
-                          url
-                        </a>
-                      </styled.a>
-                    </p>
-                  </Typography>
-                </withStyles(Typography)>
+                          <a
+                            className="c1"
+                            href="url"
+                            rel="nofollow"
+                            target="_blank"
+                          >
+                            url
+                          </a>
+                        </styled.a>
+                      </p>
+                    </Typography>
+                  </withStyles(Typography)>
+                </Styled(withStyles(Typography))>
                 <Styled(withStyles(Typography))>
                   <withStyles(Typography)
-                    className="c1"
+                    className="c2"
                   >
                     <Typography
                       align="inherit"
-                      className="c1"
+                      className="c2"
                       classes={
                         Object {
                           "alignCenter": "MuiTypography-alignCenter-42",
@@ -201,7 +214,7 @@ exports[`should render <PreviewCard> correctly with data 1`] = `
                       type="body1"
                     >
                       <p
-                        className="MuiTypography-root-29 MuiTypography-body1-38 c1"
+                        className="MuiTypography-root-29 MuiTypography-body1-38 c2"
                       >
                         data
                       </p>
@@ -219,9 +232,14 @@ exports[`should render <PreviewCard> correctly with data 1`] = `
 `;
 
 exports[`should render <PreviewCard> correctly without data 1`] = `
-.c0 {
+.c1 {
   word-wrap: break-word;
   color: rgba(0,0,0,0.54);
+}
+
+.c0 {
+  max-height: 2.5em;
+  overflow: hidden;
 }
 
 <PreviewCard
@@ -284,80 +302,88 @@ exports[`should render <PreviewCard> correctly without data 1`] = `
               <div
                 className="MuiCardContent-root-28"
               >
-                <withStyles(Typography)
+                <Styled(withStyles(Typography))
                   align="center"
                   paragraph={true}
                   type="caption"
                 >
-                  <Typography
+                  <withStyles(Typography)
                     align="center"
-                    classes={
-                      Object {
-                        "alignCenter": "MuiTypography-alignCenter-42",
-                        "alignJustify": "MuiTypography-alignJustify-44",
-                        "alignLeft": "MuiTypography-alignLeft-41",
-                        "alignRight": "MuiTypography-alignRight-43",
-                        "body1": "MuiTypography-body1-38",
-                        "body2": "MuiTypography-body2-37",
-                        "button": "MuiTypography-button-40",
-                        "caption": "MuiTypography-caption-39",
-                        "colorAccent": "MuiTypography-colorAccent-51",
-                        "colorError": "MuiTypography-colorError-52",
-                        "colorInherit": "MuiTypography-colorInherit-48",
-                        "colorPrimary": "MuiTypography-colorPrimary-49",
-                        "colorSecondary": "MuiTypography-colorSecondary-50",
-                        "display1": "MuiTypography-display1-33",
-                        "display2": "MuiTypography-display2-32",
-                        "display3": "MuiTypography-display3-31",
-                        "display4": "MuiTypography-display4-30",
-                        "gutterBottom": "MuiTypography-gutterBottom-46",
-                        "headline": "MuiTypography-headline-34",
-                        "noWrap": "MuiTypography-noWrap-45",
-                        "paragraph": "MuiTypography-paragraph-47",
-                        "root": "MuiTypography-root-29",
-                        "subheading": "MuiTypography-subheading-36",
-                        "title": "MuiTypography-title-35",
-                      }
-                    }
-                    color="default"
-                    gutterBottom={false}
-                    headlineMapping={
-                      Object {
-                        "body1": "p",
-                        "body2": "aside",
-                        "display1": "h1",
-                        "display2": "h1",
-                        "display3": "h1",
-                        "display4": "h1",
-                        "headline": "h1",
-                        "subheading": "h3",
-                        "title": "h2",
-                      }
-                    }
-                    noWrap={false}
+                    className="c0"
                     paragraph={true}
                     type="caption"
                   >
-                    <p
-                      className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-paragraph-47 MuiTypography-alignCenter-42"
+                    <Typography
+                      align="center"
+                      className="c0"
+                      classes={
+                        Object {
+                          "alignCenter": "MuiTypography-alignCenter-42",
+                          "alignJustify": "MuiTypography-alignJustify-44",
+                          "alignLeft": "MuiTypography-alignLeft-41",
+                          "alignRight": "MuiTypography-alignRight-43",
+                          "body1": "MuiTypography-body1-38",
+                          "body2": "MuiTypography-body2-37",
+                          "button": "MuiTypography-button-40",
+                          "caption": "MuiTypography-caption-39",
+                          "colorAccent": "MuiTypography-colorAccent-51",
+                          "colorError": "MuiTypography-colorError-52",
+                          "colorInherit": "MuiTypography-colorInherit-48",
+                          "colorPrimary": "MuiTypography-colorPrimary-49",
+                          "colorSecondary": "MuiTypography-colorSecondary-50",
+                          "display1": "MuiTypography-display1-33",
+                          "display2": "MuiTypography-display2-32",
+                          "display3": "MuiTypography-display3-31",
+                          "display4": "MuiTypography-display4-30",
+                          "gutterBottom": "MuiTypography-gutterBottom-46",
+                          "headline": "MuiTypography-headline-34",
+                          "noWrap": "MuiTypography-noWrap-45",
+                          "paragraph": "MuiTypography-paragraph-47",
+                          "root": "MuiTypography-root-29",
+                          "subheading": "MuiTypography-subheading-36",
+                          "title": "MuiTypography-title-35",
+                        }
+                      }
+                      color="default"
+                      gutterBottom={false}
+                      headlineMapping={
+                        Object {
+                          "body1": "p",
+                          "body2": "aside",
+                          "display1": "h1",
+                          "display2": "h1",
+                          "display3": "h1",
+                          "display4": "h1",
+                          "headline": "h1",
+                          "subheading": "h3",
+                          "title": "h2",
+                        }
+                      }
+                      noWrap={false}
+                      paragraph={true}
+                      type="caption"
                     >
-                      <styled.a
-                        href="url"
-                        rel="nofollow"
-                        target="_blank"
+                      <p
+                        className="MuiTypography-root-29 MuiTypography-caption-39 MuiTypography-paragraph-47 MuiTypography-alignCenter-42 c0"
                       >
-                        <a
-                          className="c0"
+                        <styled.a
                           href="url"
                           rel="nofollow"
                           target="_blank"
                         >
-                          url
-                        </a>
-                      </styled.a>
-                    </p>
-                  </Typography>
-                </withStyles(Typography)>
+                          <a
+                            className="c1"
+                            href="url"
+                            rel="nofollow"
+                            target="_blank"
+                          >
+                            url
+                          </a>
+                        </styled.a>
+                      </p>
+                    </Typography>
+                  </withStyles(Typography)>
+                </Styled(withStyles(Typography))>
                 <withStyles(Typography)
                   align="center"
                   component="div"
