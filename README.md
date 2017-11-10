@@ -10,6 +10,8 @@
 [![Greenkeeper badge][greenkeeper-badge]][greenkeeper]
 [![prettier][prettier-badge]][prettier] [![license][license-badge]][license]
 
+[![](./docs/screenshot.png)](https://micro-website-api.now.sh)
+
 ## How To Use
 
 ### a. Deploy to Now.sh
