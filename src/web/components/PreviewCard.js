@@ -6,6 +6,7 @@ import Typography from 'material-ui/Typography';
 import { CircularProgress } from 'material-ui/Progress';
 
 const Link = styled.a`
+  word-wrap: break-word;
   color: rgba(0, 0, 0, 0.54);
 `;
 

@@ -7,7 +7,7 @@
   "repository": "https://github.com/evenchange4/micro-website-api.git",
   "scripts": {
     "start:web": "PORT=3001 react-scripts start",
-    "build": "REACT_APP_GA_ID='UA-33845990-13' react-scripts build",
+    "build": "react-scripts build",
     "start": "micro src/server.js",
     "dev": "concurrently 'yarn start:web' 'micro-dev src/server.js'",
     "test": "CI=true react-scripts test --env=jsdom --coverage --runInBand",
@@ -35,6 +35,7 @@
     "micro-cors": "^0.0.4",
     "micro-joi": "^3.0.0",
     "microrouter": "^3.0.0",
+    "mime": "^2.0.3",
     "puppeteer": "^0.12.0",
     "ramda": "^0.25.0"
   },
