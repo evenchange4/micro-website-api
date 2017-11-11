@@ -10,7 +10,6 @@ import { filter } from 'rxjs/operators/filter';
 import { switchMap } from 'rxjs/operators/switchMap';
 import { combineLatest } from 'rxjs/operators/combineLatest';
 import { merge } from 'rxjs/observable/merge';
-import qs from 'query-string';
 import Button from 'material-ui/Button';
 import TextField from 'material-ui/TextField';
 import Checkbox from 'material-ui/Checkbox';
@@ -28,6 +27,7 @@ import {
   createEventHandler,
 } from '../utils/recomposeHelper';
 import actionsKeyValueHelper from '../utils/actionsKeyValueHelper';
+import queryStringhelper from '../utils/queryStringhelper';
 import fetchPreview from '../utils/fetchPreview';
 import PreviewCard from './PreviewCard';
 
@@ -50,21 +50,6 @@ const Form = componentFromStream(props$ => {
   } = createEventHandler();
   const { handler: onReset, stream: onReset$ } = createEventHandler();
   const { handler: onSubmit, stream: onSubmit$ } = createEventHandler();
-
-  const parsed = qs.parse(window.location.search);
-  const parsedValues = {
-    url: parsed.url || '',
-    selector: parsed.selector || '',
-    cache: R.cond([
-      [R.equals('true'), R.always(true)],
-      [R.equals('false'), R.always(false)],
-      [R.T, R.always(true)],
-    ])(parsed.cache),
-    format: parsed.format || 'raw',
-    actions:
-      (parsed.actions && actionsKeyValueHelper.parseActions(parsed.actions)) ||
-      [],
-  };
 
   // reducer :: prevValues => values
   const reducer$ = merge(
@@ -98,9 +83,10 @@ const Form = componentFromStream(props$ => {
     ),
   );
 
+  const queryValues = queryStringhelper.parse(window.location.search);
   const values$ = reducer$.pipe(
-    scan((acc, fn) => fn(acc), parsedValues),
-    startWith(parsedValues),
+    scan((acc, fn) => fn(acc), queryValues),
+    startWith(queryValues),
   );
 
   const url$ = merge(
@@ -108,23 +94,7 @@ const Form = componentFromStream(props$ => {
     onSubmit$.pipe(
       tap(e => e.preventDefault()),
       withLatestFrom(values$, (e, values) =>
-        qs.stringify(
-          {
-            url: encodeURIComponent(values.url),
-            selector: encodeURIComponent(values.selector),
-            cache: encodeURIComponent(values.cache),
-            format: encodeURIComponent(values.format),
-            actions: values.actions.map(
-              R.pipe(
-                R.omit(['key']),
-                R.values,
-                R.map(encodeURIComponent),
-                R.join(','),
-              ),
-            ),
-          },
-          { encode: false },
-        ),
+        queryStringhelper.stringify(values),
       ),
     ),
   ).pipe(

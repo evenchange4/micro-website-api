@@ -1,0 +1,246 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`actions= 1`] = `
+Object {
+  "actions": Array [
+    Object {
+      "click": "",
+      "key": "mockUuidv4",
+    },
+  ],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`actions=,wait 1`] = `
+Object {
+  "actions": Array [
+    Object {
+      "click": "",
+      "key": "mockUuidv4",
+      "wait": "wait",
+    },
+  ],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`actions=click, 1`] = `
+Object {
+  "actions": Array [
+    Object {
+      "click": "click",
+      "key": "mockUuidv4",
+      "wait": "",
+    },
+  ],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`actions=click,wait 1`] = `
+Object {
+  "actions": Array [
+    Object {
+      "click": "click",
+      "key": "mockUuidv4",
+      "wait": "wait",
+    },
+  ],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`actions=click,wait&actions= 1`] = `
+Object {
+  "actions": Array [
+    Object {
+      "click": "click",
+      "key": "mockUuidv4",
+      "wait": "wait",
+    },
+    Object {
+      "click": "",
+      "key": "mockUuidv4",
+    },
+  ],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`actions=click,wait&actions=click, 1`] = `
+Object {
+  "actions": Array [
+    Object {
+      "click": "click",
+      "key": "mockUuidv4",
+      "wait": "wait",
+    },
+    Object {
+      "click": "click",
+      "key": "mockUuidv4",
+      "wait": "",
+    },
+  ],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`actions=click,wait&actions=click,wait 1`] = `
+Object {
+  "actions": Array [
+    Object {
+      "click": "click",
+      "key": "mockUuidv4",
+      "wait": "wait",
+    },
+    Object {
+      "click": "click",
+      "key": "mockUuidv4",
+      "wait": "wait",
+    },
+  ],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`cache= 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`cache=false 1`] = `
+Object {
+  "actions": Array [],
+  "cache": false,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`cache=other 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`cache=true 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`format= 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`format=json 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "json",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`format=other 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`format=raw 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`url= 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "",
+}
+`;
+
+exports[`url=url 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "url",
+}
+`;
+
+exports[`url=url&selector= 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "",
+  "url": "url",
+}
+`;
+
+exports[`url=url&selector=selector 1`] = `
+Object {
+  "actions": Array [],
+  "cache": true,
+  "format": "raw",
+  "selector": "selector",
+  "url": "url",
+}
+`;
