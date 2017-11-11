@@ -1,6 +1,12 @@
 ## Change Log
 
-### upcoming (2017/11/10 13:49 +00:00)
+### upcoming (2017/11/11 04:28 +00:00)
+- [45d9af9](https://github.com/evenchange4/micro-website-api/commit/45d9af987b1b3408ecc0709f6e15d65519287763) fix(CD): remove auto scale (@evenchange4)
+- [#7](https://github.com/evenchange4/micro-website-api/pull/7) fix(API): allow actions list (#7) (@evenchange4)
+- [#6](https://github.com/evenchange4/micro-website-api/pull/6) feat(Web): add social meta (#6) (@evenchange4)
+- [657ebf6](https://github.com/evenchange4/micro-website-api/commit/657ebf6a8e86f2af0119cf851b3bbf6776a2e52c) docs(README): add screenshot [ci skip] (@evenchange4)
+- [#5](https://github.com/evenchange4/micro-website-api/pull/5) fix(web): disalbe sw (#5) (@evenchange4)
+- [#4](https://github.com/evenchange4/micro-website-api/pull/4) fix: server & docs: README (#4) (@evenchange4)
 - [#3](https://github.com/evenchange4/micro-website-api/pull/3) feat(web): add website (#3) (@evenchange4)
 - [#1](https://github.com/evenchange4/micro-website-api/pull/1) Update dependencies to enable Greenkeeper 🌴 (#1) (@greenkeeper[bot])
 - [#2](https://github.com/evenchange4/micro-website-api/pull/2) feat(format): support json (#2) (@evenchange4)
