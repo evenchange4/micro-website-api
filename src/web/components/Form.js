@@ -1,16 +1,5 @@
 import React from 'react';
 import * as R from 'ramda';
-import { mapTo } from 'rxjs/operators/mapTo';
-import { map } from 'rxjs/operators/map';
-import { scan } from 'rxjs/operators/scan';
-import { startWith } from 'rxjs/operators/startWith';
-import { withLatestFrom } from 'rxjs/operators/withLatestFrom';
-import { tap } from 'rxjs/operators/tap';
-import { filter } from 'rxjs/operators/filter';
-import { switchMap } from 'rxjs/operators/switchMap';
-import { combineLatest } from 'rxjs/operators/combineLatest';
-import { merge } from 'rxjs/observable/merge';
-import qs from 'query-string';
 import Button from 'material-ui/Button';
 import TextField from 'material-ui/TextField';
 import Checkbox from 'material-ui/Checkbox';
@@ -22,12 +11,14 @@ import DeleteIcon from 'material-ui-icons/Delete';
 import QueueAnim from 'rc-queue-anim';
 import uuidv4 from 'uuid/v4';
 import { FormGroup, FormControl, FormControlLabel } from 'material-ui/Form';
+import * as O from '../utils/rxEsmodule';
 import { ButtonFooter, StyledActionWrapper } from './styled-components';
 import {
   componentFromStream,
   createEventHandler,
 } from '../utils/recomposeHelper';
 import actionsKeyValueHelper from '../utils/actionsKeyValueHelper';
+import queryStringhelper from '../utils/queryStringhelper';
 import fetchPreview from '../utils/fetchPreview';
 import PreviewCard from './PreviewCard';
 
@@ -51,22 +42,11 @@ const Form = componentFromStream(props$ => {
   const { handler: onReset, stream: onReset$ } = createEventHandler();
   const { handler: onSubmit, stream: onSubmit$ } = createEventHandler();
 
-  const parsed = qs.parse(window.location.search);
-  const parsedValues = {
-    url: parsed.url || '',
-    selector: parsed.selector || '',
-    cache: parsed.cache || true,
-    format: parsed.format || 'raw',
-    actions:
-      (parsed.actions && actionsKeyValueHelper.parseActions(parsed.actions)) ||
-      [],
-  };
-
-  // reducer$ :: prevValues => values
-  const reducer$ = merge(
-    onReset$.pipe(mapTo(R.always(INITIAL_VALUES))),
+  // reducer :: prevValues => values
+  const reducer$ = O.merge(
+    onReset$.pipe(O.mapTo(R.always(INITIAL_VALUES))),
     onAddClick$.pipe(
-      mapTo(values =>
+      O.mapTo(values =>
         R.over(
           R.lensPath(['actions']),
           R.append({ key: uuidv4(), click: '', wait: '' }),
@@ -75,10 +55,10 @@ const Form = componentFromStream(props$ => {
       ),
     ),
     onDeleteClick$.pipe(
-      map(index => R.over(R.lensPath(['actions']), R.remove(index, 1))),
+      O.map(index => R.over(R.lensPath(['actions']), R.remove(index, 1))),
     ),
     onChange$.pipe(
-      map(e => {
+      O.map(e => {
         const target = e.target;
         const value =
           target.type === 'checkbox' ? target.checked : target.value;
@@ -95,56 +75,40 @@ const Form = componentFromStream(props$ => {
   );
 
   const values$ = reducer$.pipe(
-    scan((acc, fn) => fn(acc), parsedValues),
-    startWith(parsedValues),
+    O.startWith(queryStringhelper.parse(window.location.search)),
+    O.scan((acc, fn) => fn(acc)),
   );
 
-  const url$ = merge(
-    onReset$.pipe(mapTo('')),
+  const url$ = O.merge(
+    onReset$.pipe(O.mapTo('')),
     onSubmit$.pipe(
-      tap(e => e.preventDefault()),
-      withLatestFrom(values$, (e, values) =>
-        qs.stringify(
-          {
-            url: encodeURIComponent(values.url),
-            selector: encodeURIComponent(values.selector),
-            cache: encodeURIComponent(values.cache),
-            format: encodeURIComponent(values.format),
-            actions: values.actions.map(
-              R.pipe(
-                R.omit(['key']),
-                R.values,
-                R.map(encodeURIComponent),
-                R.join(','),
-              ),
-            ),
-          },
-          { encode: false },
-        ),
+      O.tap(e => e.preventDefault()),
+      O.withLatestFrom(values$, (e, values) =>
+        queryStringhelper.stringify(values),
       ),
     ),
   ).pipe(
     // Remind: Update url without reload side effect.
-    tap(queryString => {
+    O.tap(queryString => {
       window.history.pushState(null, null, `/?${queryString}`);
     }),
-    map(
+    O.map(
       R.cond([
         [R.isEmpty, R.always('')],
         [R.T, R.concat(`${getBaseURL(window.location)}/api?`)],
       ]),
     ),
-    startWith(''),
+    O.startWith(''),
   );
 
-  const preview$ = merge(
-    onReset$.pipe(mapTo('')),
-    onSubmit$.pipe(mapTo('')),
-    url$.pipe(filter(R.complement(R.isEmpty)), switchMap(fetchPreview)),
-  ).pipe(startWith(''));
+  const preview$ = O.merge(
+    onReset$.pipe(O.mapTo('')),
+    onSubmit$.pipe(O.mapTo('')),
+    url$.pipe(O.filter(R.complement(R.isEmpty)), O.switchMap(fetchPreview)),
+  ).pipe(O.startWith(''));
 
   return props$.pipe(
-    combineLatest(values$, url$, preview$, (props, values, url, preview) => (
+    O.combineLatest(values$, url$, preview$, (props, values, url, preview) => (
       <form onSubmit={onSubmit}>
         <FormGroup>
           {/* 1. URL */}
