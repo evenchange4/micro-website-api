@@ -55,14 +55,18 @@ const Form = componentFromStream(props$ => {
   const parsedValues = {
     url: parsed.url || '',
     selector: parsed.selector || '',
-    cache: parsed.cache || true,
+    cache: R.cond([
+      [R.equals('true'), R.always(true)],
+      [R.equals('false'), R.always(false)],
+      [R.T, R.always(true)],
+    ])(parsed.cache),
     format: parsed.format || 'raw',
     actions:
       (parsed.actions && actionsKeyValueHelper.parseActions(parsed.actions)) ||
       [],
   };
 
-  // reducer$ :: prevValues => values
+  // reducer :: prevValues => values
   const reducer$ = merge(
     onReset$.pipe(mapTo(R.always(INITIAL_VALUES))),
     onAddClick$.pipe(
