@@ -10,6 +10,7 @@ describe('pageAction', () => {
       waitFor: jest.fn(),
       $eval: jest.fn(),
       goto: jest.fn(),
+      close: jest.fn(),
     };
   });
 
