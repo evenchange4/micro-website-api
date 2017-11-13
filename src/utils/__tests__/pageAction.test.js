@@ -14,6 +14,12 @@ describe('pageAction', () => {
     };
   });
 
+  it('should not perform any clicks', async () => {
+    await pageAction(page, []);
+    expect(page.click).not.toBeCalled();
+    expect(page.waitFor).not.toBeCalled();
+  });
+
   it('should perform click', async () => {
     await pageAction(page, ['#id']);
     expect(page.click).toBeCalledWith('#id');
