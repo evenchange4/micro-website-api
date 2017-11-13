@@ -10,7 +10,14 @@ describe('pageAction', () => {
       waitFor: jest.fn(),
       $eval: jest.fn(),
       goto: jest.fn(),
+      close: jest.fn(),
     };
+  });
+
+  it('should not perform any clicks', async () => {
+    await pageAction(page, []);
+    expect(page.click).not.toBeCalled();
+    expect(page.waitFor).not.toBeCalled();
   });
 
   it('should perform click', async () => {

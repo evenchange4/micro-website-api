@@ -19,6 +19,7 @@ declare type Page = {
   waitFor: (string | number, any) => Promise<void>,
   goto: (string, any) => Promise<void>,
   $eval: (string, any) => Promise<void>,
+  close: any => Promise<void>,
 };
 
 declare type Request = {
@@ -26,3 +27,7 @@ declare type Request = {
 };
 
 declare type Handler = (Request, any) => any;
+
+declare type Browser = {
+  newPage: any => Promise<Page>,
+};

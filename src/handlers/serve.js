@@ -1,8 +1,8 @@
 const path = require('path');
 const url = require('url');
 const fs = require('fs-extra');
-const { send } = require('micro');
 const mime = require('mime');
+const sendError = require('../utils/sendError');
 
 /**
  * TODO: serve middleware
@@ -26,12 +26,7 @@ const serve = async (req, res) => {
     res.setHeader('Content-type', mime.getType(file));
     return res.end(data);
   } catch (error) {
-    console.log({ error }); //eslint-disable-line
-    return send(res, 400, {
-      message: error.message,
-      name: error.message,
-      statusCode: 400,
-    });
+    return sendError(res, error);
   }
 };
 
