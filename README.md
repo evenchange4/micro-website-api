@@ -96,6 +96,7 @@ $ yarn run flow
 
 * https://wrapapi.com/
 * https://github.com/ebidel/try-puppeteer
+* https://github.com/zenato/puppeteer-renderer
 
 ## CONTRIBUTING
 
