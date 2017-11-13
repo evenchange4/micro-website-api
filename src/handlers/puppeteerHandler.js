@@ -18,7 +18,7 @@ const launch = () =>
   });
 
 // TODO: Shared global Chromium instance.
-let browser;
+let browser /* : Browser */;
 
 const puppeteerHandler /* : Handler */ = async (req, res) => {
   const { url, selector, actions, cache, format } = getQuery(req.query);
