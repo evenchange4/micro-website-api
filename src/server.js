@@ -8,17 +8,16 @@ const schema = require('./utils/schema');
 const serve = require('./handlers/serve');
 const puppeteerHandler = require('./handlers/puppeteerHandler');
 
+const middleware = R.compose(
+  cors({
+    allowMethods: ['GET', 'OPTIONS'],
+    allowHeaders: [],
+    origin: '*',
+  }),
+  validation(schema),
+);
+
 module.exports = router(
-  get(
-    '/api',
-    R.compose(
-      cors({
-        allowMethods: ['GET', 'OPTIONS'],
-        allowHeaders: [],
-        origin: '*',
-      }),
-      validation(schema),
-    )(puppeteerHandler),
-  ),
+  get('/api', middleware(puppeteerHandler)),
   get('*', compress(serve)),
 );
