@@ -1,6 +1,6 @@
 # Micro-website-api
 
-> A api microservice that crawl dynamic website power by
+> An API microservice that crawls dynamic website powered by
 > [puppeteer](https://github.com/GoogleChrome/puppeteer).
 
 [![Travis][travis-badge]][travis] [![Codecov Status][codecov-badge]][codecov]
@@ -16,7 +16,7 @@
 
 ### a. Deploy to Now.sh
 
-> One click deploys to △ now
+> One-click deploys to △ now
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/evenchange4/micro-website-api&env=TIMEOUT&env=REACT_APP_GA_ID&docker=true)
 
