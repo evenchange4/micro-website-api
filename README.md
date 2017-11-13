@@ -16,7 +16,7 @@
 
 ### a. Deploy to Now.sh
 
-> One-click deploys to △ now
+> One-click deploy to △ now
 
 [![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/evenchange4/micro-website-api&env=TIMEOUT&env=REACT_APP_GA_ID&docker=true)
 
@@ -60,7 +60,7 @@ $ docker run --rm -it \
    [\[WebUI\]](<https://micro-website-api.now.sh/?actions=%23noticeall%20%3E%20div.noticeright%20%3E%20div%20%3E%20div.index_icon01%20%3E%20div.itemright%20%3E%20ul%20%3E%20li%3Anth-child(3)%20%3E%20a,15000&cache=true&format=raw&selector=%23css_table1&url=https%3A%2F%2Fipost.post.gov.tw%2Fpst%2Fhome.html>)
    [\[API\]](<https://micro-website-api.now.sh/api?actions=%23noticeall%20%3E%20div.noticeright%20%3E%20div%20%3E%20div.index_icon01%20%3E%20div.itemright%20%3E%20ul%20%3E%20li%3Anth-child(3)%20%3E%20a,15000&cache=true&format=raw&selector=%23css_table1&url=https%3A%2F%2Fipost.post.gov.tw%2Fpst%2Fhome.html>)
 
-5. Response `JSON` format.
+5. Respond `JSON` format.
    [\[WebUI\]](https://micro-website-api.now.sh/?cache=true&format=json&selector=%23root%20%3E%20div&url=https%3A%2F%2Fmichaelhsu.tw%2F)
    [\[API\]](https://micro-website-api.now.sh/api?cache=true&format=json&selector=%23root%20%3E%20div&url=https%3A%2F%2Fmichaelhsu.tw%2F)
 
