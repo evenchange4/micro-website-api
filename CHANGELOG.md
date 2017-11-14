@@ -1,6 +1,8 @@
 ## Change Log
 
-### upcoming (2017/11/13 07:21 +00:00)
+### v1.0.0 (2017/11/14 09:09 +00:00)
+- [#13](https://github.com/evenchange4/micro-website-api/pull/13) refactor(puppeteer): relaunch feature (#13) (@evenchange4)
+- [#12](https://github.com/evenchange4/micro-website-api/pull/12) docs: document tuning (#12) (@evenchange4)
 - [#10](https://github.com/evenchange4/micro-website-api/pull/10) refactor(docker): use image from dockerhub (#10) (@evenchange4)
 - [#9](https://github.com/evenchange4/micro-website-api/pull/9) fix(UI): cache (#9) (@evenchange4)
 - [45d9af9](https://github.com/evenchange4/micro-website-api/commit/45d9af987b1b3408ecc0709f6e15d65519287763) fix(CD): remove auto scale (@evenchange4)
