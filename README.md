@@ -18,7 +18,7 @@
 
 > One-click deploy to △ now
 
-[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/evenchange4/micro-website-api&env=TIMEOUT&env=REACT_APP_GA_ID&docker=true)
+[![Deploy to now](https://deploy.now.sh/static/button.svg)](https://deploy.now.sh/?repo=https://github.com/evenchange4/micro-website-api&env=TIMEOUT&docker=true)
 
 ### b. Docker image
 
@@ -27,7 +27,6 @@ $ docker build -t micro-website-api .
 $ docker run --rm -it \
   -p 3000:3000 \
   -e "TIMEOUT=300000" \
-  -e "REACT_APP_GA_ID=''" \
   micro-website-api
 ```
 
@@ -38,7 +37,6 @@ $ docker run --rm -it \
 | **ENV**           | **Required** | **Default** | **Description**   |
 | ----------------- | ------------ | ----------- | ----------------- |
 | `TIMEOUT`         | V            |             | Wait for timeout. |
-| `REACT_APP_GA_ID` |              | ''          | For GA.           |
 
 ## Demo
 
