@@ -32,7 +32,7 @@
     "memory-cache": "^0.2.0",
     "micro": "^9.0.1",
     "micro-compress": "^1.0.0",
-    "micro-cors": "^0.0.4",
+    "micro-cors": "^0.1.0",
     "micro-joi": "^3.0.0",
     "microrouter": "^3.0.0",
     "mime": "^2.0.3",
